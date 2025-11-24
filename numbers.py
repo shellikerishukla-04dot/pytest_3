@@ -1,15 +1,22 @@
 import sys
-def sum_numbers(x, y):
-    return x + y
-if _name=="main_":
+
+def main():
+    # Check if exactly two additional arguments are passed
+    if len(sys.argv) != 3:
+        print("Usage: python add.py <num1> <num2>")
+        sys.exit(1)
     
-    if len(sys.argv) == 3:
-        script_name = sys.argv[0]
-        a = int(sys.argv[1])
-        b = int(sys.argv[2])
-    else:
-        script_name = sys.argv[0]
-        a = 20
-        b = 30
-    result = sum_numbers(a, b)
+    # Convert command-line arguments to numbers (float)
+    try:
+        a = float(sys.argv[1])
+        b = float(sys.argv[2])
+    except ValueError:
+        print("Please provide valid numbers.")
+        sys.exit(1)
+    
+    # Perform addition
+    result = a + b
     print("Sum:", result)
+
+if _name_ == "_main_":
+    main()
