@@ -1,16 +1,15 @@
 import sys
-
-def add(a, b):
-    return a + b
-
-if name == "main":
-    if len(sys.argv) == 3:   
-        x = float(sys.argv[1])
-        y = float(sys.argv[2])
-        print("User provided input values:")
-    else:  
-        print("No input given - using default values:")
-        x = 10
-        y = 20
-
-    print("sum:", add(x, y))
+def sum_numbers(x, y):
+    return x + y
+if _name=="main_":
+    
+    if len(sys.argv) == 3:
+        script_name = sys.argv[0]
+        a = int(sys.argv[1])
+        b = int(sys.argv[2])
+    else:
+        script_name = sys.argv[0]
+        a = 20
+        b = 30
+    result = sum_numbers(a, b)
+    print("Sum:", result)
